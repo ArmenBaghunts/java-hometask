@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Track .gitignore itself
+!.gitignore
+
+# Track src folder and everything inside
+!src/
+!src/**
