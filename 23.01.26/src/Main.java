@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] x1 = {-5, 2, 6, 13, 5, 18, 125, 7, 99, 12, 11};
+        int[] x1 = {-5, -2, 6, 13, 5, 18, 125, 7, 99, 12, 11};
         int n = 0;
         for (int i = 0; i < x1.length; i++) {
             if ((x1[i] == 2 || x1[i] == 3 || x1[i] == 5 || x1[i] == 7) || (x1[i] != 1&&x1[i] % 2 != 0 && x1[i] % 3 != 0 && x1[i] % 5 != 0 && x1[i] % 7 != 0))
@@ -10,9 +10,6 @@ public class Main {
             {
                 n++;
             }
-
-
-
 
 
         }
