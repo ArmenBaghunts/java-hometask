@@ -6,4 +6,4 @@
 
 # Track src folder and everything inside
 !src/
-!src/**gi
+!src/**
