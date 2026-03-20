@@ -15,7 +15,7 @@ class Helper {
 
 
 
-public static Book[] method4(Book [] booksInput, String authorname){
+public  Book[] method4(Book [] booksInput, String authorname){
     Book [] booksResult=new Book[booksInput.length];
     int k=0;
     for (int i=0; i<booksInput.length; i++) {
