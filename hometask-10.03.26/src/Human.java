@@ -5,8 +5,8 @@ class Human {
     int age;
 
     void displayInfo(){
-        System.out.println();
-        System.out.println();
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
     }
 
 }
@@ -20,8 +20,7 @@ class Student extends Human {
     @Override
     void displayInfo(){
         System.out.println("Student's Data");
-        System.out.println("Name: "+name);
-        System.out.println("Age: "+age);
+       super.displayInfo();
         System.out.println("Grade: "+grade);
     }
 }
@@ -34,8 +33,7 @@ class Teacher extends Human {
     }
     void displayInfo(){
         System.out.println("Teacher's Data");
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+        super.displayInfo();
         System.out.println("Subject: " + subject);
     }
 }

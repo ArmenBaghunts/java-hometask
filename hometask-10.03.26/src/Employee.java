@@ -3,7 +3,8 @@ public class Employee {
   int salary;
 
   void work() {
-
+      System.out.println("Name: "+name);
+      System.out.println("Age: "+salary);
   }
 }
 
@@ -17,8 +18,7 @@ class Developer extends Employee {
    @Override
     void work() {
        System.out.println("Developer's datas");
-       System.out.println("Name: "+name);
-       System.out.println("Salary: "+salary);
+     super.work();
        System.out.println("Language of programming: " + programmingLanguage);
    }
 }
@@ -34,8 +34,7 @@ class Manager extends Employee {
     @Override
     void work() {
         System.out.println("Manager's datas");
-        System.out.println("Name: " + name);
-        System.out.println("Salary: " + salary);
+       super.work();
         System.out.println("Quantity of team members: " + teamSize);
     }
 }
