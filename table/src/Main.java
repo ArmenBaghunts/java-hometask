@@ -1,27 +1,30 @@
 public class Main {
     public static void main(String[] args) {
 
-        SquareTable t1 =
+        Table table;
+        table =
                 new SquareTable(4, "wood", "glass", 2);
+        System.out.println(table.area());
 
-        RectangleTable t2 =
+        table =
                 new RectangleTable(4, "metal", "wood", 2, 3);
+        System.out.println(table.area());
 
-        CircleTable t3 =
+       table =
                 new CircleTable(1, "metal", "glass", 1.5);
+        System.out.println(table.area());
 
-        ExtendableRectangleTable t4 =
+        table =
                 new ExtendableRectangleTable(
                         4,"wood","wood",
                         2,3,
                         2
                 );
 
-        System.out.println(t1.area());
-        System.out.println(t2.area());
-        System.out.println(t3.area());
 
-        System.out.println("Closed area = " + t4.area());
-        System.out.println("Extended area = " + t4.extendedArea());
+
+        System.out.println(table.area());
+
+
     }
 }

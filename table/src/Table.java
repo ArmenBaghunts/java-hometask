@@ -1,13 +1,13 @@
-class Table {
+abstract class Table {
 
     private int legsCount;
     private String legsMaterial;
-    private String topMaterial;
+    private String surfaceMaterial;
 
     public Table(int legsCount, String legsMaterial, String topMaterial) {
         this.legsCount = legsCount;
         this.legsMaterial = legsMaterial;
-        this.topMaterial = topMaterial;
+        this.surfaceMaterial = surfaceMaterial;
     }
 
     public int getLegsCount() {
@@ -18,11 +18,9 @@ class Table {
         return legsMaterial;
     }
 
-    public String getTopMaterial() {
-        return topMaterial;
+    public String getSurfaceMaterial() {
+        return surfaceMaterial;
     }
 
-    public double area() {
-        return 0;
-    }
+    abstract public double area();
 }
