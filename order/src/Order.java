@@ -18,7 +18,7 @@ public boolean equals(Object o) {
     }
 
     public int hashCode(){
-     return itemName.hashCode() + 31*id;
+     return id;
     }
 
 }

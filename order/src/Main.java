@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import  java.util.Map;
+import  java.util.TreeMap;
 
 
 public class Main {
@@ -27,8 +29,32 @@ public class Main {
         System.out.println("The number of itmes bought by Narek equals " + map.get(buyer1).size());
 
         map.put(buyer2, list2);
-        System.out.println();
         System.out.println("The number of itmes bought by Gegham equals " + map.get(buyer2).size());
 
+        System.out.println();
+
+        TreeMap<String, Integer> result =
+                new TreeMap<>();
+
+        for (Map.Entry<Customer, ArrayList<Order>> entry
+                : map.entrySet()) {
+
+            String customerName =
+                    entry.getKey().name;
+
+            int orderCount =
+                    entry.getValue().size();
+
+            result.put(customerName, orderCount);
+        }
+
+        for (Map.Entry<String, Integer> entry
+                : result.entrySet()) {
+
+            System.out.println(
+                    entry.getKey() + " -> "
+                            + entry.getValue()
+            );
+        }
     }
 }
