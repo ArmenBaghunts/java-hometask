@@ -1,0 +1,11 @@
+import java.util.List;
+
+public static double sum(List<? extends Number> list) {
+    double result = 0;
+
+    for (Number number : list) {
+        result += number.doubleValue();
+    }
+
+    return result;
+}
