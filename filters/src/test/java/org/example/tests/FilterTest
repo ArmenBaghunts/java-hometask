@@ -1,0 +1,28 @@
+
+package org.example.tests;
+
+import org.example.pages.JobsPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class FilterTest extends BaseTest {
+
+    @Test
+    public void verifyJobCategoryFilters() {
+
+        JobsPage jobsPage = new JobsPage(driver);
+
+        jobsPage.filter("Job Categories", "Banking/Credit");
+        jobsPage.filter("Job Categories", "Security");
+
+        jobsPage.clickFilter();
+
+        // Validation
+        Assert.assertTrue(
+                driver.getPageSource().contains("Banking/Credit")
+                        || driver.getPageSource().contains("Security"),
+                "Selected job categories are not displayed"
+        );
+    }
+}
+
